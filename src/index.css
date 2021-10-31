@@ -1,13 +1,285 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.green-text {
+  color: #27bc93;
+}
+
+.soft-text {
+  color: #abababc9;
+}
+
+.bg-green {
+  background-color: #27bc93 !important;
+}
+
+.header-container {
+  text-align: center;
+  padding: 2em 0;
+}
+
+/*Blog Header Container*/
+.blog-header-router-container {
+  background-color: #000000c4;
+  width: 100%;
+}
+
+.blogRouter {
+  font-size: 16px;
+}
+/*E.OBlog Header Container*/
+
+/*Main*/
+.main-container {
+  background-color: #e7ecefdb;
+  width: 100%;
+  padding: 3em 4em;
+}
+/*E.O Main*/
+
+/*Card*/
+.card {
+  height: 500px;
+}
+/*E.O Card*/
+
+/*Sidebar*/
+.sidebar-element-title {
+}
+
+.sidebar-element-border {
+  width: 75px;
+  height: 2px;
+  background: black;
+  border-radius: 5px;
+}
+/*E.O Sidebar*/
+
+/*Search Input*/
+.input-group {
+  position: relative;
+}
+
+#seach-input {
+  background-color: #e7ecefdb;
+  border: none;
+  border-radius: 0;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
+/*E.O Search Input*/
+
+/*Category*/
+.category-element:not(:last-child) {
+  border-bottom: 1px solid grey;
+}
+/*E.O Category*/
+
+/*NewsLetter*/
+.newsLetterInput {
+  line-height: 2.5em;
+  text-indent: 10px;
+}
+
+.submitButton {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.fancy-border {
+  border-top: 2px solid;
+  border-width: 5px 5px 5px 5px;
+  border-image: linear-gradient(
+      to right,
+      white 25%, 
+      blue 25%,
+      blue 50%, 
+      white 50%,
+      white 75%,
+      red 75%,
+      red 100%
+    )
+    5;
+}
+/*E.O NewsLetter*/
+
+
+/*Latest Post*/
+.post-date {
+  font-size: 12px;
+}
+/*E.O Latest Post*/
+
+
+/*Recent Comments*/
+p.comment:first-child {
+  color: #27bc93;
+}
+
+p.comment {
+  color: #000;
+}
+/*E.O Recent Comments*/
+
+
+/*Tags Coluds*/
+.tag-button, .selected-tag-button {
+    padding: 0.5em 1em;
+    margin: 0 1em 1em 0;
+    text-transform: uppercase;
+}
+
+.tag-button {
+  background-color: transparent;
+  border: 1px solid grey;
+}
+
+.selected-tag-button {
+  background-color: #27bc93;
+  border: none;
+  color: #fff;
+}
+/*E.O Tags Coluds*/
+
+
+/*Banner*/
+.banner-container {
+  height: 300px;
+  border: 10px solid #27bc93;
+}
+/*E.O Banner*/
+
+
+/*Post Details*/
+.post-detail-img {
+  background-position: center;
+  background-size: cover;
+}
+
+.post-details-header-container {
+  border-bottom: 1px solid grey;
+}
+
+.blog-detail-img {
+  width: 300px;
+  float: left;
+}
+/*E.O Post Details*/
+
+
+/*PAGINATION*/
+.paginationButtons {
+  width: 80%;
+  height: 40%;
+  list-style: none;
+  display: flex;
+}
+
+.paginationButtons a {
+  margin: 8px;
+  border-radius: 5px;
+  color: #2b2eff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.paginationActive {
+  text-decoration: underline;
+  color: #27BC93 !important;
+}
+
+.paginationButtons li.next, li.previous {
+  display: none;
+}
+/*E.O PAGINATION*/
+
+
+/*SEARCH-BOX*/
+#searchForm {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 30px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+#searchInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 32.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+  background-color: #f1f2f4;
+}
+
+.fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+#searchForm:hover {
+  width: 160px;
+  cursor: pointer;
+}
+
+#searchForm:hover #searchInput {
+  display: block;
+}
+
+#searchForm:hover .fa {
+  background: #07051a;
+  color: white;
+}
+
+/*E.O SEARCH-BOX*/
+
+
+@media screen and (max-width: 1024px){
+  .main-container {
+    padding: 2em 0;
+  }
+
+  .blogRouter {
+    font-size: 12px;
+  }
 }
